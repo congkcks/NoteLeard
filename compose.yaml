@@ -1,0 +1,7 @@
+﻿services:
+  notelearn:
+    image: notelearn
+    build:
+      context: .
+      dockerfile: NoteLearn/Dockerfile
+
