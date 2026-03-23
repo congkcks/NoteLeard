@@ -68,7 +68,6 @@ public class QaController : ControllerBase
             });
         }
 
-        // 3️⃣ rerank
         var chunks = candidates
             .OrderBy(x => x.Score)
             .Take(topK)
@@ -76,7 +75,6 @@ public class QaController : ControllerBase
             .ThenBy(x => x.ChunkIndex)
             .ToList();
 
-        // 4️⃣ build context (token optimized)
         const int maxContextChars = 3000;
 
         var contextParts = new List<string>();

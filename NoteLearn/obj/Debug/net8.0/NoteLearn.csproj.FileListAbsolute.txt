@@ -164,4 +164,5 @@ C:\Users\ACER\source\repos\NoteLearn\NoteLearn\bin\Debug\net8.0\UglyToad.PdfPig.
 C:\Users\ACER\source\repos\NoteLearn\NoteLearn\bin\Debug\net8.0\UglyToad.PdfPig.dll
 C:\Users\ACER\source\repos\NoteLearn\NoteLearn\bin\Debug\net8.0\MediatR.dll
 C:\Users\ACER\source\repos\NoteLearn\NoteLearn\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\ACER\source\repos\NoteLearn\NoteLearn\obj\Debug\net8.0\NoteLearn.sourcelink.json
 C:\Users\ACER\source\repos\NoteLearn\NoteLearn\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

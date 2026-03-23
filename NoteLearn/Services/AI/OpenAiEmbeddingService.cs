@@ -3,44 +3,42 @@ using System.Text;
 
 namespace NoteLearn.Services.AI;
 
-public class GeminiEmbeddingService : IEmbeddingService
+public class OpenAIEmbeddingService : IEmbeddingService
 {
     private readonly HttpClient _http;
-    private readonly string _apiKey = "AIzaSyCXtbb9aBAULE0dNQQJz-lbXlcyrnlZlwI";
+    private readonly string _apiKey = "sk-YhSSE352W3l48tEFK2kDRUwApby32RSYKjK9YhTvxkSJ3C5s";
 
-    public GeminiEmbeddingService(HttpClient http)
+    public OpenAIEmbeddingService(HttpClient http)
     {
-        _http = http
-            ?? throw new InvalidOperationException("Gemini API key is missing.");
+        _http = http;
     }
 
     public async Task<float[]> EmbedAsync(string text, CancellationToken ct = default)
     {
-        var url =
-            $"https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedContent?key={_apiKey}";
+        var url = "https://api-v2.shopaikey.com/v1/embeddings";
 
         var payload = new
         {
-            content = new
-            {
-                parts = new[]
-                {
-                    new { text }
-                }
-            }
+            model = "text-embedding-3-small",
+            input = text
         };
 
-        var json = JsonSerializer.Serialize(payload);
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
+        var request = new HttpRequestMessage(HttpMethod.Post, url);
+        request.Headers.Add("Authorization", $"Bearer {_apiKey}");
+        request.Content = new StringContent(
+            JsonSerializer.Serialize(payload),
+            Encoding.UTF8,
+            "application/json"
+        );
 
-        var response = await _http.PostAsync(url, content, ct);
+        var response = await _http.SendAsync(request, ct);
         response.EnsureSuccessStatusCode();
 
-        var result = await response.Content.ReadFromJsonAsync<JsonElement>(ct);
+        var json = await response.Content.ReadFromJsonAsync<JsonElement>(ct);
 
-        var vector = result
+        var vector = json
+            .GetProperty("data")[0]
             .GetProperty("embedding")
-            .GetProperty("values")
             .EnumerateArray()
             .Select(x => x.GetSingle())
             .ToArray();

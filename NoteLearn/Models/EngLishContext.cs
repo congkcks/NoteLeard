@@ -231,7 +231,7 @@ public partial class EngLishContext : DbContext
             // pgvector column
             entity.Property(e => e.Embedding)
                   .HasColumnName("embedding")
-                  .HasColumnType("vector(768)");
+                  .HasColumnType("vector(1536)");
 
             entity.Property(e => e.CreatedAt)
                   .HasDefaultValueSql("now()")

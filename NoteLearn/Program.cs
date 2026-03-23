@@ -31,10 +31,9 @@ builder.Services.AddSingleton<IBackgroundTaskQueue>(new BackgroundTaskQueue(200)
 builder.Services.AddHttpClient<RemoteFileDownloader>();
 builder.Services.AddSingleton<PdfTextExtractor>();
 builder.Services.AddScoped<PdfRagIngestJob>();
-builder.Services.AddScoped<IEmbeddingService, OllamaEmbeddingService>();
-builder.Services.AddHttpClient<ILlmService, OllamaLlmService>();
-builder.Services.AddHttpClient<GeminiEmbeddingService>();
+builder.Services.AddScoped<IEmbeddingService, OpenAIEmbeddingService>();
 builder.Services.AddScoped<FileStorageService>();
+builder.Services.AddHttpClient<ILlmService, OpenAiLlmService>();
 builder.Services.AddScoped<YoutubeTranscriptService>();
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
