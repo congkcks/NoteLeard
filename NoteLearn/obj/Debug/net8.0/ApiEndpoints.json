@@ -47,22 +47,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "NoteLearn.Controllers.DocumentController",
-    "Method": "ViewPdf",
-    "RelativePath": "{contentId}/view",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "contentId",
-        "Type": "System.Int64",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "NoteLearn.Controllers.NoteController",
     "Method": "Update",
     "RelativePath": "{id}",
@@ -168,6 +152,22 @@
       {
         "Name": "req",
         "Type": "NoteLearn.Dtos.TestPdfLinkRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DocumentController",
+    "Method": "ExtractTest",
+    "RelativePath": "api/Document/{contentId}/extract-test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contentId",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],

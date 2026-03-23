@@ -31,6 +31,7 @@ builder.Services.AddSingleton<IBackgroundTaskQueue>(new BackgroundTaskQueue(200)
 builder.Services.AddHttpClient<RemoteFileDownloader>();
 builder.Services.AddSingleton<PdfTextExtractor>();
 builder.Services.AddScoped<PdfRagIngestJob>();
+builder.Services.AddScoped<PdfPipelineService>();
 builder.Services.AddScoped<IEmbeddingService, OpenAIEmbeddingService>();
 builder.Services.AddScoped<FileStorageService>();
 builder.Services.AddHttpClient<ILlmService, OpenAiLlmService>();

@@ -213,7 +213,7 @@
         }
       }
     },
-    "/{contentId}/view": {
+    "/api/Document/{contentId}/extract-test": {
       "get": {
         "tags": [
           "Document"
