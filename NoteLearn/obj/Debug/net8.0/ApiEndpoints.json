@@ -297,6 +297,27 @@
   },
   {
     "ContainingType": "NoteLearn.Controllers.ContentController",
+    "Method": "UploadVideo",
+    "RelativePath": "upload-video",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NoteLearn.Controllers.ContentController",
     "Method": "GetMyContents",
     "RelativePath": "user/{userId}",
     "HttpMethod": "GET",

@@ -29,108 +29,89 @@ public class QaController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Ask([FromBody] QaRequest req, CancellationToken ct)
     {
-        if (req == null)
-            return BadRequest("Body required.");
+        // 1. Kiểm tra đầu vào cơ bản
+        if (req == null || string.IsNullOrWhiteSpace(req.Question))
+            return BadRequest("Question is required.");
 
-        if (string.IsNullOrWhiteSpace(req.Question))
-            return BadRequest("Question required.");
-
-        if (req.ContentId <= 0)
-            return BadRequest("contentId must be > 0.");
-
-        // tối ưu retrieval
         var topK = req.TopK <= 0 ? 4 : Math.Min(req.TopK, 8);
 
-        // 1️⃣ Embed question
+        // 2. Chuyển câu hỏi sang Vector
         var qEmbedding = await _embedder.EmbedAsync(req.Question, ct);
         var qVec = new Vector(qEmbedding);
 
-        // 2️⃣ Vector search
-        var candidates = await _db.ContentChunks
-            .Where(x => x.ContentId == req.ContentId && x.Embedding != null)
+        // 3. LẤY CONTEXT ƯU TIÊN (Trang bìa/Metadata)
+        // Luôn lấy ChunkIndex = 0 vì đây thường là nơi chứa tiêu đề, tác giả, ngày tháng.
+        var metadataChunk = await _db.ContentChunks
+            .Where(x => x.ContentId == req.ContentId && x.ChunkIndex == 0)
+            .Select(x => new { x.Text, x.ChunkIndex, x.PageNumber, Score = 0.0f })
+            .FirstOrDefaultAsync(ct);
+
+        // 4. TÌM KIẾM VECTOR (Các đoạn liên quan nhất)
+        var vectorCandidates = await _db.ContentChunks
+            .Where(x => x.ContentId == req.ContentId && x.ChunkIndex != 0 && x.Embedding != null)
             .OrderBy(x => x.Embedding!.L2Distance(qVec))
-            .Take(topK * 3) // retrieve nhiều hơn để rerank
+            .Take(topK)
             .Select(x => new
             {
                 x.Text,
                 x.ChunkIndex,
                 x.PageNumber,
-                Score = x.Embedding!.L2Distance(qVec)
+                Score = (float)x.Embedding!.L2Distance(qVec)
             })
             .ToListAsync(ct);
 
-        if (!candidates.Any())
+        // 5. HỢP NHẤT DỮ LIỆU
+        var finalChunks = new List<dynamic>();
+        if (metadataChunk != null) finalChunks.Add(metadataChunk);
+
+        // Chỉ thêm các chunk vector nếu chúng chưa tồn tại (tránh trùng lặp)
+        foreach (var candidate in vectorCandidates)
         {
-            return Ok(new
-            {
-                answer = "Không tìm thấy thông tin trong tài liệu.",
-                sources = Array.Empty<object>()
-            });
+            if (!finalChunks.Any(c => c.ChunkIndex == candidate.ChunkIndex))
+                finalChunks.Add(candidate);
         }
 
-        var chunks = candidates
-            .OrderBy(x => x.Score)
-            .Take(topK)
+        if (!finalChunks.Any())
+            return Ok(new { answer = "Không tìm thấy dữ liệu.", sources = Array.Empty<object>() });
+
+        // Sắp xếp lại theo thứ tự logic của tài liệu (Page -> Index) để LLM dễ đọc
+        var sortedChunks = finalChunks
             .OrderBy(x => x.PageNumber ?? int.MaxValue)
             .ThenBy(x => x.ChunkIndex)
             .ToList();
 
-        const int maxContextChars = 3000;
+        // 6. GHÉP CONTEXT VÀ NHẮC NHỞ LLM
+        var contextParts = sortedChunks.Select(c => $"[Đoạn {c.ChunkIndex}]: {c.Text}").ToList();
+        var context = string.Join("\n\n", contextParts);
 
-        var contextParts = new List<string>();
-        int currentLength = 0;
-
-        foreach (var c in chunks)
-        {
-            if (currentLength + c.Text.Length > maxContextChars)
-                break;
-
-            contextParts.Add(c.Text);
-            currentLength += c.Text.Length;
-        }
-
-        var context = string.Join("\n\n---\n\n", contextParts);
-
-        // 5️⃣ prompt
         var prompt = $@"
-Bạn là trợ lý AI cho tài liệu nội bộ.
+Bạn là trợ lý AI cho tài liệu học tập NoteLearn.
+Thông tin về tiêu đề, tác giả, ngày tháng thường nằm ở các đoạn đầu tiên (Đoạn 0).
 
-Chỉ trả lời dựa trên CONTEXT bên dưới.
-Chỉ trả lời bằng **tiếng Việt**.
-Nếu không có thông tin thì trả lời:
-'Không tìm thấy trong tài liệu.'
+NHIỆM VỤ:
+1. Chỉ trả lời dựa trên CONTEXT bên dưới.
+2. Trả lời bằng tiếng Việt, ngắn gọn, chính xác.
+3. Nếu CONTEXT không có thông tin, hãy nói 'Không tìm thấy trong tài liệu.'
 
 CONTEXT:
 {context}
 
-QUESTION:
-{req.Question}
+QUESTION: {req.Question}
 
-ANSWER (tiếng Việt, ngắn gọn):
-";
+ANSWER:";
 
-        // 6️⃣ gọi LLM
+        // 7. GỌI LLM VÀ TRẢ KẾT QUẢ
         var answer = await _llm.GenerateAsync(prompt, ct);
 
         return Ok(new
         {
             answer = answer.Trim(),
-            sources = chunks.Select((c, i) => new
-            {
-                source = i + 1,
-                c.Text,
-                c.ChunkIndex,
-                c.PageNumber,
-                score = c.Score
-            }),
+            sources = sortedChunks,
             debug = new
             {
                 req.ContentId,
-                req.Question,
-                topK,
-                retrieved = candidates.Count,
-                usedChunks = contextParts.Count,
-                embeddingDim = qEmbedding.Length
+                usedMetadataChunk = metadataChunk != null,
+                totalChunksUsed = finalChunks.Count
             }
         });
     }

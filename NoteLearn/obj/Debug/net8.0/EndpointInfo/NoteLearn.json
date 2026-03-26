@@ -177,6 +177,45 @@
         }
       }
     },
+    "/upload-video": {
+      "post": {
+        "tags": [
+          "Content"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "UserId": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              },
+              "encoding": {
+                "File": {
+                  "style": "form"
+                },
+                "UserId": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/add-youtube": {
       "post": {
         "tags": [

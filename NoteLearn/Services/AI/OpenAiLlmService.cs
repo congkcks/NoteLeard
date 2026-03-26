@@ -4,38 +4,34 @@ using System.Text.Json;
 
 namespace NoteLearn.Services.AI;
 
-/// <summary>
-/// Interface định nghĩa dịch vụ LLM
-/// </summary>
 public interface ILlmService
 {
     Task<string> GenerateAsync(string prompt, CancellationToken ct = default);
 }
 
-/// <summary>
-/// Triển khai dịch vụ LLM theo chuẩn OpenAI (Tương thích với SHOPAIKEY)
-/// </summary>
 public class OpenAiLlmService : ILlmService
 {
-    private readonly HttpClient _http;
+    // 1. Chuyển sang dùng IHttpClientFactory thay vì HttpClient trực tiếp
+    private readonly IHttpClientFactory _httpClientFactory;
 
-    // ⚠️ CẢNH BÁO: API Key này đã bị lộ trong lịch sử chat, bạn nên tạo key mới!
+    // Lưu ý: Nên đưa Key này vào appsettings.json để bảo mật hơn
     private readonly string _apiKey = "sk-YhSSE352W3l48tEFK2kDRUwApby32RSYKjK9YhTvxkSJ3C5s";
-
-    // Sử dụng Endpoint chuẩn OpenAI Chat Completions
     private const string ApiUrl = "https://api-v2.shopaikey.com/v1/chat/completions";
 
-    public OpenAiLlmService(HttpClient http)
+    public OpenAiLlmService(IHttpClientFactory httpClientFactory)
     {
-        _http = http;
+        _httpClientFactory = httpClientFactory;
     }
 
     public async Task<string> GenerateAsync(string prompt, CancellationToken ct = default)
     {
-        // 1. Chuẩn bị Payload theo cấu trúc messages (giống hệt code Python/JS của bạn)
+        // 2. TẠO CLIENT MỚI TỪ FACTORY (Đảm bảo không bao giờ bị Dispose khi chạy ngầm)
+        using var client = _httpClientFactory.CreateClient();
+        client.Timeout = TimeSpan.FromSeconds(100); // Tăng timeout cho AI nếu cần
+
         var payload = new
         {
-            model = "gpt-4o", // Hoặc gpt-4o-mini, gpt-5-mini tùy gói của bạn
+            model = "gpt-4o-mini", // Bạn nên dùng model ổn định
             messages = new[]
             {
                 new { role = "system", content = "You are a helpful assistant." },
@@ -51,24 +47,18 @@ public class OpenAiLlmService : ILlmService
         request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
         request.Content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
 
-        // 2. Gửi request
-        var response = await _http.SendAsync(request, ct);
+        // 3. Sử dụng 'client' vừa tạo để gửi request
+        var response = await client.SendAsync(request, ct);
         var body = await response.Content.ReadAsStringAsync(ct);
-
-        // Debug log (Có thể xóa khi chạy production)
-        Console.WriteLine("=== RAW BODY FROM API ===");
-        Console.WriteLine(body);
 
         if (!response.IsSuccessStatusCode)
         {
             throw new HttpRequestException($"API Error: {response.StatusCode} - {body}");
         }
 
-        // 3. Parse JSON theo chuẩn: choices[0].message.content
         using var doc = JsonDocument.Parse(body);
         var root = doc.RootElement;
 
-        // Kiểm tra từng cấp để tránh lỗi NullReferenceException
         if (root.TryGetProperty("choices", out var choices) && choices.GetArrayLength() > 0)
         {
             var firstChoice = choices[0];
@@ -81,7 +71,6 @@ public class OpenAiLlmService : ILlmService
             }
         }
 
-        // Nếu không tìm thấy cấu trúc chuẩn, quăng lỗi chi tiết
         throw new Exception($"Cấu trúc JSON trả về không đúng chuẩn OpenAI. Nội dung nhận được: {body}");
     }
 }

@@ -7,6 +7,7 @@ using NoteLearn.Services.Download;
 using NoteLearn.Services.Ingest;
 using NoteLearn.Services.Pdf;
 using NoteLearn.Services.Storage;
+using NoteLearn.Services.Video;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
@@ -32,10 +33,11 @@ builder.Services.AddHttpClient<RemoteFileDownloader>();
 builder.Services.AddSingleton<PdfTextExtractor>();
 builder.Services.AddScoped<PdfRagIngestJob>();
 builder.Services.AddScoped<PdfPipelineService>();
-builder.Services.AddScoped<IEmbeddingService, OpenAIEmbeddingService>();
+builder.Services.AddSingleton<IEmbeddingService, OpenAIEmbeddingService>();
 builder.Services.AddScoped<FileStorageService>();
 builder.Services.AddHttpClient<ILlmService, OpenAiLlmService>();
-builder.Services.AddScoped<YoutubeTranscriptService>();
+builder.Services.AddHttpClient(); // Đăng ký Factory chung (chỉ cần 1 dòng này cho cả project)
+builder.Services.AddScoped<VideoProcessingService>(); // Đăng ký service như một class bình thườngbuilder.Services.AddScoped<YoutubeTranscriptService>();
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
