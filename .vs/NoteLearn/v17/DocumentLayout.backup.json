@@ -3,44 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\services\\ingest\\pdfpipelineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\services\\ingest\\pdfpipelineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\controllers\\qacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\controllers\\qacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\services\\pdf\\pdftextextractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\services\\pdf\\pdftextextractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\controllers\\contentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\controllers\\contentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\services\\ai\\iembeddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\services\\ai\\iembeddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\controllers\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\controllers\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\controllers\\embeddingdebugcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\controllers\\embeddingdebugcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\models\\documentpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\models\\documentpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\services\\ai\\openaillmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\services\\ai\\openaillmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\models\\userprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\models\\userprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\controllers\\qacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\controllers\\qacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\models\\englishcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\models\\englishcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|c:\\users\\acer\\source\\repos\\notelearn\\notelearn\\services\\ai\\openaillmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51395ADC-73E0-4093-8410-5A9404A0D8FC}|NoteLearn\\NoteLearn.csproj|solutionrelative:notelearn\\services\\ai\\openaillmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,8 +66,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 537,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IEmbeddingService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Services\\AI\\IEmbeddingService.cs",
+              "RelativeDocumentMoniker": "NoteLearn\\Services\\AI\\IEmbeddingService.cs",
+              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Services\\AI\\IEmbeddingService.cs",
+              "RelativeToolTip": "NoteLearn\\Services\\AI\\IEmbeddingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T08:14:01.71Z",
+              "IsPinned": true
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -74,84 +103,128 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContentController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\ContentController.cs",
+              "RelativeDocumentMoniker": "NoteLearn\\Controllers\\ContentController.cs",
+              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\ContentController.cs",
+              "RelativeToolTip": "NoteLearn\\Controllers\\ContentController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAlwGwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T09:52:48.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "NoteLearn\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "NoteLearn\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T09:42:51.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AiController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\AiController.cs",
+              "RelativeDocumentMoniker": "NoteLearn\\Controllers\\AiController.cs",
+              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\AiController.cs",
+              "RelativeToolTip": "NoteLearn\\Controllers\\AiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T09:42:51.077Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "DocumentController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\DocumentController.cs",
+              "RelativeDocumentMoniker": "NoteLearn\\Controllers\\DocumentController.cs",
+              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\DocumentController.cs",
+              "RelativeToolTip": "NoteLearn\\Controllers\\DocumentController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBQAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T09:34:22.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "PdfPipelineService.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Services\\Ingest\\PdfPipelineService.cs",
               "RelativeDocumentMoniker": "NoteLearn\\Services\\Ingest\\PdfPipelineService.cs",
               "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Services\\Ingest\\PdfPipelineService.cs",
               "RelativeToolTip": "NoteLearn\\Services\\Ingest\\PdfPipelineService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-23T09:36:38.252Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DocumentController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\DocumentController.cs",
-              "RelativeDocumentMoniker": "NoteLearn\\Controllers\\DocumentController.cs",
-              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\DocumentController.cs",
-              "RelativeToolTip": "NoteLearn\\Controllers\\DocumentController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwAkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T09:34:22.854Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "PdfTextExtractor.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Services\\Pdf\\PdfTextExtractor.cs",
-              "RelativeDocumentMoniker": "NoteLearn\\Services\\Pdf\\PdfTextExtractor.cs",
-              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Services\\Pdf\\PdfTextExtractor.cs",
-              "RelativeToolTip": "NoteLearn\\Services\\Pdf\\PdfTextExtractor.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBsAAAAwAAAAAAAAAA==",
+              "Title": "NoteController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\NoteController.cs",
+              "RelativeDocumentMoniker": "NoteLearn\\Controllers\\NoteController.cs",
+              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\NoteController.cs",
+              "RelativeToolTip": "NoteLearn\\Controllers\\NoteController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwDIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T09:30:23.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T09:52:00.074Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DocumentPage.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Models\\DocumentPage.cs",
-              "RelativeDocumentMoniker": "NoteLearn\\Models\\DocumentPage.cs",
-              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Models\\DocumentPage.cs",
-              "RelativeToolTip": "NoteLearn\\Models\\DocumentPage.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "EmbeddingDebugController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\EmbeddingDebugController.cs",
+              "RelativeDocumentMoniker": "NoteLearn\\Controllers\\EmbeddingDebugController.cs",
+              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\EmbeddingDebugController.cs",
+              "RelativeToolTip": "NoteLearn\\Controllers\\EmbeddingDebugController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAUwGoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T09:25:29.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T09:26:01.799Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IEmbeddingService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Services\\AI\\IEmbeddingService.cs",
-              "RelativeDocumentMoniker": "NoteLearn\\Services\\AI\\IEmbeddingService.cs",
-              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Services\\AI\\IEmbeddingService.cs",
-              "RelativeToolTip": "NoteLearn\\Services\\AI\\IEmbeddingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Models\\User.cs",
+              "RelativeDocumentMoniker": "NoteLearn\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Models\\User.cs",
+              "RelativeToolTip": "NoteLearn\\Models\\User.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T08:14:01.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T09:43:16.044Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "UserProgress.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Models\\UserProgress.cs",
+              "RelativeDocumentMoniker": "NoteLearn\\Models\\UserProgress.cs",
+              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Models\\UserProgress.cs",
+              "RelativeToolTip": "NoteLearn\\Models\\UserProgress.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T09:43:21.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "OpenAiLlmService.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Services\\AI\\OpenAiLlmService.cs",
               "RelativeDocumentMoniker": "NoteLearn\\Services\\AI\\OpenAiLlmService.cs",
               "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Services\\AI\\OpenAiLlmService.cs",
               "RelativeToolTip": "NoteLearn\\Services\\AI\\OpenAiLlmService.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAADwv1YAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAADwv1YAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-23T08:05:36.197Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Program.cs",
               "RelativeDocumentMoniker": "NoteLearn\\Program.cs",
@@ -159,12 +232,11 @@
               "RelativeToolTip": "NoteLearn\\Program.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAAACEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T08:01:39.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T08:01:39.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "EngLishContext.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Models\\EngLishContext.cs",
               "RelativeDocumentMoniker": "NoteLearn\\Models\\EngLishContext.cs",
@@ -176,29 +248,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "QaController.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\QaController.cs",
               "RelativeDocumentMoniker": "NoteLearn\\Controllers\\QaController.cs",
               "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\QaController.cs",
               "RelativeToolTip": "NoteLearn\\Controllers\\QaController.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAUwIgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAYwHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T08:33:55.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmbeddingDebugController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\EmbeddingDebugController.cs",
-              "RelativeDocumentMoniker": "NoteLearn\\Controllers\\EmbeddingDebugController.cs",
-              "ToolTip": "C:\\Users\\ACER\\source\\repos\\NoteLearn\\NoteLearn\\Controllers\\EmbeddingDebugController.cs",
-              "RelativeToolTip": "NoteLearn\\Controllers\\EmbeddingDebugController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwEUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T09:26:01.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T08:33:55.072Z"
             }
           ]
         },

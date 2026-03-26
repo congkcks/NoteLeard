@@ -213,8 +213,31 @@
         }
       }
     },
-    "/api/Document/{contentId}/extract-test": {
+    "/user/{userId}": {
       "get": {
+        "tags": [
+          "Content"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Document/{contentId}/ingest-full": {
+      "post": {
         "tags": [
           "Document"
         ],

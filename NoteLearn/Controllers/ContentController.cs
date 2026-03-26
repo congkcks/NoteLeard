@@ -63,10 +63,49 @@ public class ContentController : ControllerBase
         await _db.SaveChangesAsync();
         return Ok(content);
     }
-   
-    [HttpGet]
-    public IActionResult GetMyContents(int UserId)
+    [HttpGet("user/{userId}")]
+    public async Task<IActionResult> GetMyContents(long userId, [FromServices] Supabase.Client supabaseClient)
     {
-        return Ok(_db.Contents.Where(x => x.UserId == UserId));
+        var contents = _db.Contents
+            .Where(x => x.UserId == userId)
+            .OrderByDescending(x => x.CreatedAt)
+            .ToList();
+
+        var resultList = new List<object>();
+
+        foreach (var c in contents)
+        {
+            string? finalUrl = c.YoutubeUrl;
+
+            if (c.Type == "pdf" && !string.IsNullOrEmpty(c.FileUrl))
+            {
+                // Giả sử FileUrl trong DB lưu là: "user_1/content_0.pdf"
+                // Ta yêu cầu Supabase tạo một link có thời hạn (ví dụ: 3600 giây = 1 giờ)
+                try
+                {
+                    // "documents" là tên Bucket của bạn trên Supabase
+                    finalUrl = await supabaseClient.Storage
+                        .From("documents")
+                        .CreateSignedUrl(c.FileUrl, 3600);
+                }
+                catch (Exception)
+                {
+                    // Nếu lỗi (ví dụ file không tồn tại), trả về link gốc hoặc null
+                    finalUrl = c.FileUrl;
+                }
+            }
+
+            resultList.Add(new
+            {
+                c.Id,
+                c.Title,
+                c.Type,
+                c.CreatedAt,
+                FullUrl = finalUrl // Đây sẽ là link có kèm ?token=...
+            });
+        }
+
+        return Ok(resultList);
     }
-}
+
+    }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NoteLearn")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dedf05588a9b4bc6362626951c20aaa1434904f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8d594908a8f88ca64b927318b0f263bf6c20bd5")]
 [assembly: System.Reflection.AssemblyProductAttribute("NoteLearn")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NoteLearn")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

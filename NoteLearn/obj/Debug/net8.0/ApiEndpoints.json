@@ -159,9 +159,9 @@
   },
   {
     "ContainingType": "DocumentController",
-    "Method": "ExtractTest",
-    "RelativePath": "api/Document/{contentId}/extract-test",
-    "HttpMethod": "GET",
+    "Method": "IngestFull",
+    "RelativePath": "api/Document/{contentId}/ingest-full",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -291,6 +291,22 @@
         "Name": "UserId",
         "Type": "System.Int64",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NoteLearn.Controllers.ContentController",
+    "Method": "GetMyContents",
+    "RelativePath": "user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
